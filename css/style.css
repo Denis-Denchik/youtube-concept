@@ -3,13 +3,16 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 header {
   padding: 20px 70px 20px 32px;
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
 header .menu-button {
   padding: 0;
@@ -47,6 +50,7 @@ header .input-group .input-search {
   background: transparent;
   border: none;
   padding: 12px 23px;
+  width: 100%;
 }
 header .input-group .button-search {
   width: 19px;
@@ -81,4 +85,55 @@ header .user .user-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+
+.sidebar {
+  padding-left: 32px;
+}
+
+.nav-menu {
+  margin-top: 0px;
+  margin-bottom: 60px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav-item {
+  margin-bottom: 28px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #898989;
+  text-decoration: none;
+}
+
+.nav-text {
+  margin-left: 13px;
+}
+
+.icon {
+  fill: #898989;
+}
+
+.nav-image {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.nav-link:hover {
+  color: #ff0000;
+}
+
+.nav-link:hover .icon {
+  fill: #ff0000;
+}
+
+.nav-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 30px;
 }
