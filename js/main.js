@@ -1,40 +1,95 @@
-document.querySelectorAll('.channel').forEach(n => {
-	const swiper = new Swiper('.channel-slider', {
-		// Optional parameters
-		loop: true,
-		slidesPerView: 6,
-
-		// Navigation arrows
-		navigation: {
-			nextEl: '.channel-button-next',
-			prevEl: '.channel-button-prev',
+const myChannelSlider = new Swiper('.channel-slider', {
+	// Optional parameters
+	loop: true,
+	slidesPerView: 1,
+	spaceBetween: 20,
+	breakpoints: {
+		1900: {
+			slidesPerView: 6
 		},
-	});
-});
-document.querySelectorAll('.recommended').forEach(n => {
-	const swiper = new Swiper('.recommended-slider', {
-		// Optional parameters
-		loop: true,
-		slidesPerView: 3,
-
-		// Navigation arrows
-		navigation: {
-			nextEl: '.recommended-button-next',
-			prevEl: '.recommended-button-prev',
+		1600: {
+			slidesPerView: 5
 		},
-	});
-});
-document.querySelectorAll('.other-channel').forEach(n => {
-	const swiper = new Swiper('.other-channel-slider', {
-		// Optional parameters
-		loop: true,
-		slidesPerView: 6,
-
-		// Navigation arrows
-		navigation: {
-			nextEl: '.other-channel-button-next',
-			prevEl: '.other-channel-button-prev',
+		1300: {
+			slidesPerView: 4
 		},
-	});
+		1100: {
+			slidesPerView: 3
+		},
+		800: {
+			slidesPerView: 2
+		}
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.channel-button-next',
+		prevEl: '.channel-button-prev',
+	},
 });
+
+
+const recommendedSlider = new Swiper('.recommended-slider', {
+	// Optional parameters
+	loop: true,
+	slidesPerView: 1,
+	spaceBetween: 20,
+	breakpoints: {
+		1600: {
+			slidesPerView: 3
+		},
+		1100: {
+			slidesPerView: 2
+		}
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.recommended-button-next',
+		prevEl: '.recommended-button-prev',
+	},
+});
+
+const otherChannelSlider = new Swiper('.other-channel-slider', {
+	// Optional parameters
+	loop: true,
+	slidesPerView: 1,
+	spaceBetween: 20,
+	breakpoints: {
+		1900: {
+			slidesPerView: 6
+		},
+		1600: {
+			slidesPerView: 5
+		},
+		1300: {
+			slidesPerView: 4
+		},
+		1100: {
+			slidesPerView: 3
+		},
+		800: {
+			slidesPerView: 2
+		}
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.other-channel-button-next',
+		prevEl: '.other-channel-button-prev',
+	},
+});
+const searchBtn = document.querySelector('.mobile-search');
+const mobileSearch = document.querySelector('.input-group');
+searchBtn.addEventListener('click', () => {
+	mobileSearch.classList.toggle('is-open');
+});
+
+if (document.documentElement.scrollWidth <= 640) {
+	myChannelSlider.destroy();
+	recommendedSlider.destroy();
+	otherChannelSlider.destroy();
+}
+
+
 
