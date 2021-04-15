@@ -287,9 +287,11 @@ header .user .user-avatar {
 
 .title-wraper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .signature {
+  margin-right: 120px;
   margin-left: 19px;
   font-size: 16px;
   line-height: 20px;
@@ -298,15 +300,16 @@ header .user .user-avatar {
 }
 
 .subscribe-button {
+  margin-left: auto;
+  margin-bottom: 20px;
+  margin-right: 17%;
+  align-self: center;
   padding: 10px 20px;
   background: #ff0000;
   border-radius: 20px;
   border: none;
   outline: none;
   cursor: pointer;
-  position: absolute;
-  right: 19%;
-  top: 8px;
 }
 
 .subscribe-button-text {
@@ -330,6 +333,15 @@ header .user .user-avatar {
   }
   .header .user {
     margin-left: auto;
+  }
+}
+@media (max-width: 918px) {
+  .subscribe-button {
+    margin-top: 25px;
+  }
+
+  .other-channel-title {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 640px) {
